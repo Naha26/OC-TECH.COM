@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OC-TECH IT Training & Consulting | CompTIA Certification Courses</title>
+    <meta name="description" content="Get CompTIA certified with OC-TECH's online IT training programs. Become a certified IT technician with expert guidance from industry professionals.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: url('https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            line-height: 1.6;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.75);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(76, 175, 80, 0.3);
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 100;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .logo-img {
+            height: 60px;
+            margin-right: 15px;
+            display: block;
+            border-radius: 5px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4CAF50;
+        }
+        
+        .logo-slogan {
+            display: block;
+            font-size: 12px;
+            color: #ffffff;
+            font-weight: normal;
+            margin-top: 3px;
+            letter-spacing: 0.5px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        nav ul li {
+            margin: 0 5px;
+        }
+        
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-bottom: 2px solid transparent;
+            font-size: 0.95rem;
+        }
+        
+        nav ul li a:hover {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: #4CAF50;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 15px;
+        }
+        
+        .comptia-image {
+            max-width: 100%;
+            height: auto;
+            margin: 30px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+        
+        .comptia-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #3e8e41;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .btn-brochure {
+            background-color: #2196F3;
+        }
+        
+        .btn-brochure:hover {
+            background-color: #0b7dda;
+        }
+        
+        .about {
+            padding: 60px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 40px 0;
+            border-radius: 10px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #4CAF50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #4CAF50;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .requirements {
+            background-color: rgba(76, 175, 80, 0.15);
+            padding: 25px;
+            border-radius: 10px;
+            flex: 0 0 400px;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+        }
+        
+        .requirements h3 {
+            margin-bottom: 20px;
+            color: #4CAF50;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .requirements ul {
+            list-style: none;
+        }
+        
+        .requirements ul li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .requirements ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+        }
+        
+        .contact {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-info {
+            margin: 30px auto 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            border: 1px solid rgba(76, 175, 80, 0.2);
+        }
+        
+        .contact-info p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+        
+        .whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366;
+            color: #ffffff;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            min-width: 250px;
+        }
+        
+        .whatsapp i {
+            margin-right: 10px;
+        }
+        
+        .whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .email {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .email:hover {
+            text-decoration: underline;
+            background-color: rgba(76, 175, 80, 0.1);
+        }
+        
+        .email i {
+            margin-right: 8px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            margin-top: 60px;
+            border-top: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        footer p {
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: #ffffff;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .social-links a:hover {
+            color: #4CAF50;
+            transform: translateY(-3px);
+            background-color: rgba(76, 175, 80, 0.2);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 60px 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 40px 0;
+            border-radius: 10px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: #4CAF50;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 99;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background-color: #3e8e41;
+            transform: translateY(-3px);
+        }
+        
+        @media (min-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.3rem;
+            }
+            
+            .about {
+                padding: 80px 0;
+                margin: 60px 0;
+            }
+            
+            .contact {
+                padding: 80px 0;
+            }
+            
+            .contact-details {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 250px;
+                margin: 5px 0;
+            }
+            
+            .requirements {
+                flex: 1 1 100%;
+            }
+            
+            nav ul {
+                gap: 5px;
+            }
+            
+            nav ul li a {
+                padding: 5px 8px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="logo.jpg" alt="OC-TECH Logo" class="logo-img">
+                <div>
+                    <span class="logo-text">OC-TECH</span>
+                    <span class="logo-slogan">Embrace your IT Skills</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section class="hero" id="home">
+            <h1>IT Training & Consulting</h1>
+            <p>Transform your career with our comprehensive online CompTIA certification training programs. Become a certified IT technician with expert guidance from industry professionals.</p>
+            
+            <img src="oc.jpg" alt="CompTIA Certifications" class="comptia-image">
+            
+            <div class="btn-container">
+                <a href="#contact" class="btn">
+                    <i class="fas fa-user-graduate"></i> Enroll Now
+                </a>
+                <a href="brochure.pdf" class="btn btn-brochure" download>
+                    <i class="fas fa-download"></i> Download Brochure
+                </a>
+            </div>
+        </section>
+        
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Your Pathway to IT Certification</h3>
+                        <p>At OC-TECH, we specialize in training students to become CompTIA certified technicians. Our comprehensive online programs are designed to equip you with the knowledge and practical skills needed to excel in the IT industry.</p>
+                        <p>Our expert instructors bring years of real-world experience to the virtual classroom, ensuring you receive the highest quality education. We pride ourselves on our practical approach to IT training, focusing on hands-on skills that employers value.</p>
+                        <p>All our training is conducted online, providing you with the flexibility to learn at your own pace while receiving the same quality instruction as in-person classes.</p>
+                        <p>We offer training for all major CompTIA certifications including A+, Network+, Security+, and more. Our courses are regularly updated to reflect the latest exam objectives and industry trends.</p>
+                    </div>
+                    <div class="requirements">
+                        <h3>Training Requirements</h3>
+                        <ul>
+                            <li>Stable internet connection</li>
+                            <li>Computer or laptop</li>
+                            <li>Microphone for interactive sessions</li>
+                            <li>Webcam (recommended)</li>
+                            <li>Dedication to learning</li>
+                            <li>Basic computer literacy</li>
+                            <li>10-15 hours per week for study</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <h2 class="section-title">Student Testimonials</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"OC-TECH's training program helped me pass my CompTIA A+ exam on the first try. The instructors were knowledgeable and the hands-on labs were incredibly helpful."</p>
+                        <p class="testimonial-author">- Thabo M., A+ Certified</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The flexibility of online learning combined with the quality of instruction made this the perfect choice for me. I landed a IT support job within a month of getting certified."</p>
+                        <p class="testimonial-author">- Sarah K., Network+ Certified</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"As someone with no prior IT experience, I was nervous about starting, but the structured approach and patient instructors made all the difference. Highly recommend!"</p>
+                        <p class="testimonial-author">- David L., Security+ Certified</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Us</h2>
+                <div class="contact-info">
+                    <p><strong>GET I.T CERTIFIED WITH OUR HELP</strong></p>
+                    <p>Have questions about our programs? Contact us today to learn more about how we can help you start your IT career.</p>
+                    <div class="contact-details">
+                        <a href="mailto:Naha.Innocent@outlook.com" class="email">
+                            <i class="fas fa-envelope"></i> Naha.Innocent@outlook.com
+                        </a>
+                        <a href="https://wa.me/27624075496" class="whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp: 062 407 5496
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 OC-TECH IT Training & Consulting. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <a href="#home" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
